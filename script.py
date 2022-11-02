@@ -2,6 +2,16 @@ import os
 import re
 
 
+
+
+
+def get_function(directory):
+    for root, dirs, files in os.walk(directory):
+        for name in files:
+            file_path = os.path.join(root, name)
+
+        
+
 def find_files_in_dir(directory, regex, silent=True):
 	matching_files = []
 	for root, dirs, files in os.walk(directory):
@@ -29,6 +39,8 @@ def extract_cwe_id_from_path(path):
 
 
 if __name__=="__main__":
-    for i in os.listdir("data/C/testcases"):
-        print(extract_cwe_id_from_path(os.path.join("data/C/testcases", i)))
+#    for i in os.listdir("data/C/testcases"):
+#        print(extract_cwe_id_from_path(os.path.join("data/C/testcases", i)))
+    get_function("data/C/testcases")
+
         
