@@ -6,9 +6,16 @@ import re
 
 
 def get_function(directory):
+    file_path_list = []
     for root, dirs, files in os.walk(directory):
         for name in files:
-            file_path = os.path.join(root, name)
+            file_path_list.append(os.path.join(root, name))
+    for path in file_path_list[:1]:
+        with open(path, "r") as f:
+            contents = f.read()
+        print(contents)
+
+                
 
         
 

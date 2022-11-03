@@ -4,6 +4,7 @@ from codebert.unixcoder import UniXcoder
 
 
 def data_loader(path):
+    pass
 
 
 
@@ -25,7 +26,8 @@ def get_encoder():
 
 
 def train():
-
+    data = data_loader()
+    
 
 
 if __name__=="__main__":
